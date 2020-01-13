@@ -1,5 +1,14 @@
 description = "Default layout"
 ==
+<?php
+function onInit()
+{
+    $themePath = 'themes/' . $this->theme->getDirName();
+$this->layout['styles'] = url(mix('assets/css/styles.css', $themePath));
+$this->layout['scripts'] = url(mix('assets/js/scripts.js', $themePath));
+}
+?>
+==
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +20,8 @@ description = "Default layout"
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+<!--        <link href="{{ 'assets/css/styles.css'|theme }}" rel="stylesheet">-->
+        <link href="{{ this.layout.styles }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
@@ -30,10 +40,14 @@ description = "Default layout"
 
 
         <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+<!--        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>-->
+<!--        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>-->
+
+        <script src="{{ this.layout.scripts }}"></script>
+
         {% framework extras %}
         {% scripts %}
+
 
     </body>
 </html>

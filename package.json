@@ -2,30 +2,19 @@
   "name": "octobercms",
   "description": "Free, open-source, self-hosted CMS platform based on the Laravel PHP Framework.",
   "directories": {
-    "test": "tests/js/cases",
-    "helpers": "tests/js/helpers"
+    "test": "tests"
   },
   "scripts": {
-    "test": "mocha --require @babel/register tests/js/cases/**/*.js"
+    "test": "mocha --require @babel/register tests/js/cases/**/*.js",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/octobercms/october.git"
   },
   "contributors": [
-    {
-      "name": "Alexey Bobkov",
-      "email": "aleksey.bobkov@gmail.com"
-    },
-    {
-      "name": "Samuel Georges",
-      "email": "daftspunky@gmail.com"
-    },
-    {
-      "name": "Luke Towers",
-      "email": "octobercms@luketowers.ca",
-      "url": "https://luketowers.ca"
-    }
+    "Alexey Bobkov <aleksey.bobkov@gmail.com>",
+    "Samuel Georges <daftspunky@gmail.com>",
+    "Luke Towers <octobercms@luketowers.ca> (https://luketowers.ca)"
   ],
   "license": "MIT",
   "bugs": {
@@ -40,9 +29,20 @@
     "@babel/register": "^7.5.5",
     "babel-plugin-module-resolver": "^3.2.0",
     "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.13",
+    "sass": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.22",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
     "mocha": "^6.2.0",
     "sinon": "^7.4.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oleg Nasteka",
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }

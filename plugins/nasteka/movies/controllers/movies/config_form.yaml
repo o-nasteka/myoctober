@@ -1,0 +1,11 @@
+name: Movies
+modelClass: Nasteka\Movies\Models\Movie
+form: $/nasteka/movies/models/movie/fields.yaml
+defaultRedirect: nasteka/movies/movies
+create:
+    redirect: 'nasteka/movies/movies/update/:id'
+    redirectClose: nasteka/movies/movies
+update:
+    redirect: nasteka/movies/movies
+    redirectClose: nasteka/movies/movies
+preview: {  }
