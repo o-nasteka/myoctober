@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table nasteka_movies_'
     - builder_table_create_nasteka_movies_.php
+1.0.3:
+    - 'Updated table nasteka_movies_'
+    - builder_table_update_nasteka_movies_.php

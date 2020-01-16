@@ -17634,3 +17634,12 @@ p {
     padding-left: 0;
   }
 }
+#layout-content {
+  min-height: 800px;
+  margin-top: 50px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  text-underline-position: under;
+}

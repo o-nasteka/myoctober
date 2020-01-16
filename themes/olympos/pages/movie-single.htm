@@ -1,0 +1,56 @@
+title = "Movie single"
+url = "/movie/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Nasteka\Movies\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+
+<div class="container">
+    <h2>{{ record.name }} <strong>{{ record.year }}</strong></h2>
+    <div class="row">
+        <div class="col-sm">
+            {% if record.poster %}
+            <img src="{{ record.poster.thumb(400,auto) }}" alt="" >
+                {% else %}
+            <img src="{{ '/storage/app/media/no-image-icon.png'|app }}" alt="" width="400">
+            {% endif %}
+            <h3>Gallery</h3>
+
+            <!--   Image Gallery       -->
+            {% for image in record.movie_gallery %}
+            <div class="container">
+                <div class="row text-center text-lg-left">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="{{ image.path }}" class="d-block mb-4 h-100">
+                            <img class="img-fluid img-thumbnail" src="{{ image.thumb(100,auto) }}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--   Image Gallery   END   -->
+
+        </div>
+        <div class="col-sm">
+            <h3>Description</h3>
+            <p>{{ record.description|raw }}</p>
+        </div>
+
+    </div>
+</div>
+
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
