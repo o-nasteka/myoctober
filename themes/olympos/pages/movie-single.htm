@@ -28,13 +28,11 @@ notFoundMessage = "Record not found"
             {% endif %}
 
             <hr>
-            <h3>Gallery</h3>
+            <h2>Gallery</h2>
 
             <!--   Image Gallery       -->
             <!-- Page Content -->
             <div class="container">
-
-                <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Thumbnail Gallery</h1>
 
                 <hr class="mt-2 mb-5">
 
@@ -86,8 +84,22 @@ notFoundMessage = "Record not found"
 
         </div>
         <div class="col-sm">
+            <!-- Genres -->
+            {% if record.genres is not empty %}
+            <h3>Genres</h3>
+
+            <ul>
+            {% for genre in record.genres %}
+                <li>{{ genre.genre_title }}</li>
+            {% endfor %}
+            </ul>
+
+            {% endif %}
+
+            <!--  Description -->
             <h3>Description</h3>
             <p>{{ record.description|raw }}</p>
+
         </div>
 
     </div>

@@ -9,3 +9,8 @@ navigation:
         label: Movies
         url: nasteka/movies/movies
         icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: nasteka/movies/genres
+                icon: icon-tag
