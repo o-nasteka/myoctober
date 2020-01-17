@@ -92,8 +92,10 @@
 
 //
 #layout-content{
+    height: auto;
     min-height: 800px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .nav-link.active{
    text-decoration: underline;

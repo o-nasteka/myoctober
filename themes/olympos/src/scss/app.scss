@@ -5,19 +5,19 @@ CSS FILE STRUCTURE
 
 The css is organized in multiple files following this structure:
 
-sass/ 
-| 
+sass/
+|
 |– base/ 				# the boilerplate of the project (typography, colors, normalize, etc.)
-| 
+|
 |– components/			# all kind of small modules that appear across the site
-| 
+|
 |– helpers/ 			# all Sass tools and helpers like variables, mixins, functions, etc.
-| 
+|
 |– pages/				# page-specific styles
-| 
+|
 |– vendors/				# all the CSS files from external libraries and frameworks
-| 
- – app.scss				# primary Sass file 
+|
+ – app.scss				# primary Sass file
 
 for more info check https://www.sitepoint.com/architecture-sass-project/
 
@@ -47,3 +47,4 @@ for more info check https://www.sitepoint.com/architecture-sass-project/
 
 // pages
 @import "pages/home";
+@import "pages/movie";
