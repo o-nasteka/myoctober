@@ -22,6 +22,11 @@ class Movie extends Model
     public $table = 'nasteka_movies_';
 
     /**
+     * @var array $jsonable field
+     */
+    protected $jsonable = ['actors'];
+
+    /**
      * @var array Validation rules
      */
     public $rules = [

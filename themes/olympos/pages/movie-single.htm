@@ -99,6 +99,14 @@ notFoundMessage = "Record not found"
 
             {% endif %}
 
+            <!-- Actors        -->
+            <h3>Actors</h3>
+            <ul>
+            {% for actor in record.actors %}
+                <li>{{ actor.actor_name }} - {{ actor.actor_age }}</li>
+            {% endfor %}
+            </ul>
+
             <!--  Description -->
             <h3>Description</h3>
             <p>{{ record.description|raw }}</p>
