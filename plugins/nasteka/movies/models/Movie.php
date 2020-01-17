@@ -43,6 +43,6 @@ class Movie extends Model
             'Nasteka\Movies\Models\Genre',
             'table' => 'nasteka_movies_movies_genres',
             'order' => 'genre_title'
-        ]
+        ],
     ];
 }

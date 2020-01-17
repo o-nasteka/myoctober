@@ -28,6 +28,8 @@ notFoundMessage = "Record not found"
             {% endif %}
 
             <hr>
+
+            {% if record.movie_gallery is not empty %}
             <h2>Gallery</h2>
 
             <!--   Image Gallery       -->
@@ -80,6 +82,7 @@ notFoundMessage = "Record not found"
                 </div>
             </div>
 
+            {% endif %}
             <!--   Image Gallery   END   -->
 
         </div>
@@ -90,7 +93,7 @@ notFoundMessage = "Record not found"
 
             <ul>
             {% for genre in record.genres %}
-                <li>{{ genre.genre_title }}</li>
+                <li> <a href="/genres/{{ genre.slug }}">{{ genre.genre_title }}</a> </li>
             {% endfor %}
             </ul>
 
