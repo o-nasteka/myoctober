@@ -22,9 +22,9 @@ notFoundMessage = "Record not found"
     <div class="row">
         <div class="col-sm">
             {% if record.poster %}
-            <img src="{{ record.poster.thumb(400,auto) }}" alt="" >
+            <img src="{{ record.poster.thumb(300,auto) }}" alt="" >
                 {% else %}
-            <img src="{{ '/storage/app/media/no-image-icon.png'|app }}" alt="" width="400">
+            <img src="{{ '/storage/app/media/no-image-icon.png'|app }}" alt="" width="300">
             {% endif %}
 
             <hr>
