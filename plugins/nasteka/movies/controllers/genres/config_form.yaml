@@ -1,0 +1,10 @@
+name: Genres
+form: $/nasteka/movies/models/genre/fields.yaml
+modelClass: Nasteka\Movies\Models\Genre
+defaultRedirect: nasteka/movies/genres
+create:
+    redirect: 'nasteka/movies/genres/update/:id'
+    redirectClose: nasteka/movies/genres
+update:
+    redirect: nasteka/movies/genres
+    redirectClose: nasteka/movies/genres
