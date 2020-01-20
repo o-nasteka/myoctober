@@ -49,7 +49,7 @@ class Actorbox extends FormWidgetBase
         $this->vars['name'] = $this->formField->getName().'[]';
 
         // get selected Actors values
-        if( !empty($this->vars['selectedValues']) ){
+        if( !empty($this->getLoadValue()) ){
             $this->vars['selectedValues'] = $this->getLoadValue();
         } else {
             $this->vars['selectedValues'] = [];

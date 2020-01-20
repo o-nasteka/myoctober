@@ -8,9 +8,7 @@
 <select class="s2" name="<?= $name ?>" multiple>
 
     <?php foreach($actors as $actor_id => $actor_full_name): ?>
-        <option value="<?= $actor_id ?>"
-            <?php echo in_array($actor_id, $selectedValues) ? 'selected="selected"' : ''; ?>
-        >
+        <option value="<?= $actor_id ?>" <?php echo in_array($actor_id, $selectedValues) ? 'selected="selected"' : ''; ?>>
             <?= $actor_full_name ?> </option>
     <?php endforeach; ?>
 
