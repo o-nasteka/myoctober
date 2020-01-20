@@ -1,0 +1,68 @@
+fields:
+    name:
+        label: 'Movie title'
+        span: full
+        type: text
+        placeholder: 'Movie title'
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor
+        placeholder: 'Add movie description'
+    year:
+        label: Year
+        span: auto
+        placeholder: year
+        type: text
+    slug:
+        label: 'Add Slug'
+        span: auto
+        placeholder: slug
+        preset:
+            field: name
+            type: slug
+        type: text
+    poster:
+        label: 'Movie poster'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    movie_gallery:
+        label: 'Movie Gallery'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    genres:
+        label: Genres
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    actors:
+        label: Actors
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                actor_name:
+                    label: 'Actor name'
+                    span: auto
+                    type: text
+                actor_age:
+                    label: 'Actor age'
+                    span: auto
+                    type: text

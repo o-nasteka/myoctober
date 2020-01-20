@@ -24,7 +24,8 @@ class Movie extends Model
     /**
      * @var array $jsonable field
      */
-    protected $jsonable = ['actors'];
+    // need for actors repeater field old
+    // protected $jsonable = ['actors'];
 
     /**
      * @var array Validation rules
@@ -49,5 +50,10 @@ class Movie extends Model
             'table' => 'nasteka_movies_movies_genres',
             'order' => 'genre_title'
         ],
+        'actors' => [
+            'Nasteka\Movies\Models\Actor',
+            'table' => 'nasteka_movies_actors_movies',
+            'order' => 'name'
+        ]
     ];
 }

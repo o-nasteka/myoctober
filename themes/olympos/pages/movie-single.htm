@@ -103,7 +103,7 @@ notFoundMessage = "Record not found"
             <h3>Actors</h3>
             <ul>
             {% for actor in record.actors %}
-                <li>{{ actor.actor_name }} - {{ actor.actor_age }}</li>
+                <li>{{ actor.name }} {{ actor.lastname }}</li>
             {% endfor %}
             </ul>
 

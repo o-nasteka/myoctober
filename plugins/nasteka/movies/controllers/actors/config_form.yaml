@@ -1,0 +1,10 @@
+name: Actors
+form: $/nasteka/movies/models/actor/fields.yaml
+modelClass: Nasteka\Movies\Models\Actor
+defaultRedirect: nasteka/movies/actors
+create:
+    redirect: 'nasteka/movies/actors/update/:id'
+    redirectClose: nasteka/movies/actors
+update:
+    redirect: nasteka/movies/actors
+    redirectClose: nasteka/movies/actors
