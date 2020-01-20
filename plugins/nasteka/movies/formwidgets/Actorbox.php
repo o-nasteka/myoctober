@@ -57,6 +57,75 @@ class Actorbox extends FormWidgetBase
 
     }
 
+    /**
+     * @param mixed $value
+     * @return string|void
+     * Save value from Widget Actor
+     */
+    public function getSaveValue($actors)
+    {
+
+        $newActorsArray = [];
+
+        foreach ($actors as $actorId) {
+            if (!is_numeric($actorId)) {
+                // check Actor Full Name
+                $actorData = $this->checkNewActorName($actorId);
+
+                // save Actor Full Name
+                if($actorData){
+                    $newActor = $this->saveNewActor($actorData);
+                    $newActorsArray = $newActor->id;
+                }
+            } else{
+                $newActorsArray = $actorId;
+            }
+        }
+
+        return $newActorsArray;
+
+    }
+
+    /**
+     * @param $fullName
+     * @return array actorName and actorLastName
+     *
+     */
+    private function checkNewActorName($fullName)
+    {
+
+        $actorData = [];
+
+        $actorFullName = explode(' ', $fullName);
+
+        $actorData['actorName'] = $actorFullName[0];
+        $actorData['actorLastName'] = '';
+
+        if( count($actorFullName) > 2){
+            for($i = 1; $i <= count($actorFullName)-1; $i++ ){
+                $actorData['actorLastName'] .= $actorFullName[$i] . ' ';
+            }
+        } elseif(count($actorFullName) == 1) {
+            $actorData['actorLastName'] = '';
+        } else {
+            $actorData['actorLastName'] = $actorFullName[1];
+        }
+
+        return $actorData;
+    }
+
+    /**
+     * @param $actorData
+     * @return mixed
+     */
+    private function saveNewActor($actorData)
+    {
+        return $saved = Actor::firstOrCreate([
+            'name' => $actorData['actorName'],
+            'lastname' => $actorData['actorLastName']
+        ] );
+
+    }
 
     /**
      * load widget Assets

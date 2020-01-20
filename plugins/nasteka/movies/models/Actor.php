@@ -22,6 +22,14 @@ class Actor extends Model
     public $table = 'nasteka_movies_actors';
 
     /**
+     * @var array Fillable fields
+     */
+    protected $fillable = [
+        'name', 'lastname'
+    ];
+
+
+    /**
      * @var array Validation rules
      */
     public $rules = [
