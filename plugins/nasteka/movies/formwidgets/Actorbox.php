@@ -65,22 +65,30 @@ class Actorbox extends FormWidgetBase
     public function getSaveValue($actors)
     {
 
+//        dd($actors);
+
         $newActorsArray = [];
 
         foreach ($actors as $actorId) {
             if (!is_numeric($actorId)) {
+
                 // check Actor Full Name
                 $actorData = $this->checkNewActorName($actorId);
 
                 // save Actor Full Name
                 if($actorData){
                     $newActor = $this->saveNewActor($actorData);
-                    $newActorsArray = $newActor->id;
+//                    $newActorsArray = $newActor->id;
+                    array_push($newActorsArray,$newActor->id);
+
+                    //dd($newActorsArray);
                 }
             } else{
-                $newActorsArray = $actorId;
+                array_push($newActorsArray,$actorId);
             }
         }
+
+        // dd($newActorsArray);
 
         return $newActorsArray;
 
