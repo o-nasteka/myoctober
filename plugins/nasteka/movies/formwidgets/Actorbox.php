@@ -65,8 +65,6 @@ class Actorbox extends FormWidgetBase
     public function getSaveValue($actors)
     {
 
-//        dd($actors);
-
         $newActorsArray = [];
 
         foreach ($actors as $actorId) {
@@ -78,17 +76,12 @@ class Actorbox extends FormWidgetBase
                 // save Actor Full Name
                 if($actorData){
                     $newActor = $this->saveNewActor($actorData);
-//                    $newActorsArray = $newActor->id;
                     array_push($newActorsArray,$newActor->id);
-
-                    //dd($newActorsArray);
                 }
             } else{
                 array_push($newActorsArray,$actorId);
             }
         }
-
-        // dd($newActorsArray);
 
         return $newActorsArray;
 
