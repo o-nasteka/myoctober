@@ -1,3 +1,7 @@
+except the "plugins" and "themes" directories
+!themes/
+!plugins/
+
 /bootstrap/compiled.php
 /vendor
 composer.phar
