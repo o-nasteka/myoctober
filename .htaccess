@@ -1,8 +1,8 @@
 <IfModule mod_rewrite.c>
 
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
+#    <IfModule mod_negotiation.c>
+#        Options -MultiViews
+#    </IfModule>
 
     RewriteEngine On
 
@@ -11,7 +11,7 @@
     ## if you have installed to a subdirectory, enter the name here also.
     ##
     # RewriteBase /
-    
+
     ##
     ## Uncomment following lines to force HTTPS.
     ##
