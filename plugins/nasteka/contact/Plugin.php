@@ -7,7 +7,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Nasteka\Contact\Components\ContactForm' => 'contact'
+            'Nasteka\Contact\Components\ContactForm' => 'contactform'
         ];
     }
 
