@@ -92,7 +92,7 @@ class Actorbox extends FormWidgetBase
      * @return array actorName and actorLastName
      *
      */
-    private function checkNewActorName($fullName)
+    protected function checkNewActorName($fullName)
     {
 
         $actorData = [];
@@ -119,7 +119,7 @@ class Actorbox extends FormWidgetBase
      * @param $actorData
      * @return mixed
      */
-    private function saveNewActor($actorData)
+    protected function saveNewActor($actorData)
     {
         return $saved = Actor::firstOrCreate([
             'name' => $actorData['actorName'],

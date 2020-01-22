@@ -1,0 +1,6 @@
+plugin:
+    name: 'nasteka.contact::lang.plugin.name'
+    description: 'nasteka.contact::lang.plugin.description'
+    author: nasteka
+    icon: oc-icon-inbox
+    homepage: ''

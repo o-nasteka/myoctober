@@ -2,6 +2,10 @@ title = "Homepage"
 url = "/"
 layout = "default"
 is_hidden = 0
+
+[actors]
+results = 0
+sortOrder = "name DESC"
 ==
 <main role="main">
 
@@ -53,6 +57,7 @@ is_hidden = 0
         </a>
     </div>
 
+    {% component 'actors' %}
 
     <!-- Marketing messaging and featurettes
     ================================================== -->

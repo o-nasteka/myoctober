@@ -36,3 +36,9 @@
 1.0.13:
     - 'Updated table nasteka_movies_actors_movies'
     - builder_table_update_nasteka_movies_actors_movies_2.php
+1.0.14:
+    - 'Updated table nasteka_movies_actors'
+    - builder_table_update_nasteka_movies_actors.php
+1.0.15:
+    - 'Updated table nasteka_movies_actors'
+    - builder_table_update_nasteka_movies_actors_2.php
