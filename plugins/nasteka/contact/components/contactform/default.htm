@@ -1,5 +1,15 @@
 <form>
 
+<!--    Standart validation with refresh page -->
+<!--    <ul>-->
+<!--        {% for error in errors.all() %}-->
+<!--        <li class="alert alert-danger">{{ error }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+    <!--    Ajax errord -->
+    <div id="result"></div>
+
     <div class="form-group">
         <label for="contact_name">Your name</label>
         <input id="contact_name" class="form-control" type="text" name="name" placeholder="Name">
@@ -15,6 +25,10 @@
         <textarea id="contact_message" class="form-control" name="content" placeholder="Write your message here" rows="5"></textarea>
     </div>
 
-    <button data-request="onSubmitContactForm" class="btn btn-primary">Submit</button>
+    <button
+        data-request="onSubmitContactForm"
+        class="btn btn-primary">
+        Submit
+    </button>
 
 </form>

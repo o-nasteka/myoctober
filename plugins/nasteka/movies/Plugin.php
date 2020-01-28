@@ -7,7 +7,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Nasteka\Movies\Components\Actors' => 'actors'
+            'Nasteka\Movies\Components\Actors' => 'actors',
+            'Nasteka\Movies\Components\ActorForm' => 'actorform'
         ];
     }
 

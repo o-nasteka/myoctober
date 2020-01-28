@@ -1,0 +1,29 @@
+<ul>
+    {% for error in errors.all() %}
+    <li class="alert alert-danger">{{ error }}</li>
+    {% endfor %}
+</ul>
+
+{% flash %}
+<div class="alert alert-{{ type }}">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+</div>
+{% endflash %}
+
+<form>
+
+    <div class="form-group">
+        <label for="actor_name">Actor name</label>
+        <input id="actor_name" class="form-control" type="text" name="name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <label for="actor_last_name">Actor last name</label>
+        <input id="actor_last_name" class="form-control" type="text" name="lastname" placeholder="Last name">
+    </div>
+
+
+    <button data-request="onSaveActors" class="btn btn-primary">Save actor</button>
+
+</form>

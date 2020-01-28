@@ -1,0 +1,22 @@
+{% for message in errorMsgs %}
+<!--<div class="alert alert-danger">{{ message }}</div>-->
+{% endfor %}
+
+
+<script type="text/javascript">
+
+    $('.error-msg').remove();
+
+    var errors = {{ fieldMsgs|json_encode()|raw }};
+
+    console.log(errors)
+
+    $.each(errors, function (name, message) {
+        if(name != 'content' ){
+            $('<div class="error-msg text-danger">' + message + '</div>').insertAfter($('input[name=' + name + ']'));
+        } else {
+            $('<div class="error-msg text-danger">' + message + '</div>').insertAfter($('textarea[name=' + name + ']'));
+        }
+    })
+
+</script>

@@ -13,12 +13,34 @@
             <li class="nav-item">
                 <a class="nav-link {% if this.page.id == 'movies' %}active {% endif %} " href="{{ 'movies'|page }}">Movies</a>
             </li>
+
+            {% if user %}
+            <li class="nav-item">
+                <a class="nav-link {% if this.page.id == 'add-actors' %}active {% endif %}" href="{{ 'add-actors'|page }}" >Add actors</a>
+            </li>
+            {% endif %}
+
             <li class="nav-item">
                 <a class="nav-link {% if this.page.id == 'contact' %}active {% endif %}" href="{{ 'contact'|page }}" >Contact</a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link {% if this.page.id == 'login' %}active {% endif %}" href="{{ 'login'|page }}" >
+                    {% if not user %}
+                        Login
+                    {% else %}
+                        My profile
+                    {% endif %}
+
+                </a>
             </li>
+
+
+            {% if user %}
+            <li class="nav-item">
+                <a class="nav-link" data-request="onLogout" data-request-data="redirect: '/' " href="#">Sign out</a>
+            </li>
+            {% endif %}
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
