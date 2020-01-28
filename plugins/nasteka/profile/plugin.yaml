@@ -1,0 +1,6 @@
+plugin:
+    name: 'nasteka.profile::lang.plugin.name'
+    description: 'nasteka.profile::lang.plugin.description'
+    author: nasteka
+    icon: oc-icon-user
+    homepage: ''
